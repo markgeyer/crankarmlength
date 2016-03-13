@@ -1,8 +1,10 @@
-# crankarmlength.info
+# [Crank Arm Length](http://crankarmlength.info)
 
 Calculate your optimal bicycle crank arm length based on your body geometry and how you ride.
 
+## Setup
 ```
-npm install
-gulp
+$ npm install
+$ gulp
 ```
+Open up [localhost:3000](http://localhost:3000) on a computer or [10.0.0.2:3000](http://10.0.0.2:3000) on any mobile device.
