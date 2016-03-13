@@ -1,2 +1,96 @@
 .view-calculator
 	height 100%
+	
+	.header
+	.section
+	.footer
+		display flex
+		align-items center
+		justify-content center
+		margin-bottom 2rem
+		
+		.page
+			width 100%
+			max-width 80rem
+			
+	.header
+		min-height 16rem
+		flex-direction column
+		background-color hsl(220, 60%, 50%)
+		text-align center
+		color white
+		
+		@media mq-medium
+			min-height 18rem
+			
+		@media mq-large
+			min-height 20rem
+		
+		.page
+			padding 0 2rem 0
+		
+			h1
+				font-size 2rem
+				margin-bottom 1rem
+				text-transform uppercase
+				
+				@media mq-small
+					font-size 2.5rem
+				
+				@media mq-medium
+					font-size 3rem
+				
+				@media mq-large
+					font-size 4rem
+				
+			p
+				margin 0
+				font-size .875rem
+				letter-spacing .5px
+				
+				@media mq-small
+					font-size 1rem
+					
+				@media mq-large
+					font-size 1.125rem
+		
+	.section
+		
+		.page
+			padding 0 2rem 2rem
+			border-bottom 1px solid hsl(220, 50%, 95%)
+			
+			h2
+				margin-bottom 1rem
+				text-align center
+
+				@media mq-medium
+					text-align left
+			
+			p
+				margin 0
+				
+				@media mq-medium
+					column-count 2
+					column-gap 2rem
+			
+	.footer
+		
+		.page
+			padding 0 2rem 0
+
+			ul
+				list-style none
+				margin 0
+				padding-left 0
+				
+				@media mq-medium
+					column-count 2
+					column-gap 2rem
+				
+				li
+					margin-bottom 1rem
+					
+					&:last-child
+						margin-bottom 0
+					

@@ -1,5 +1,37 @@
 <main class="view-calculator">
 
-	<p>{{yay}}</p>
+	<header class="header">
+		<div class="page">
+			<h1>{{yay}}</h1>
+			<p>Calculate your optimal bicycle crank arm length based on your body geometry and how you ride.</p>
+		</div>
+	</header>
+
+	<!-- Calculator -->
+	<section class="section">
+		<div class="page">
+			<p>(calculator)</p>
+		</div>
+	</section>
+
+	<!-- Explanations -->
+	<section ng-repeat="formula in formulas" id="formula_0" class="section">
+		<div class="page">
+			<h2>{{formula.title}}</h2>
+			<p>{{formula.description}}</p>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="page">
+			<h3>Related Links</h3>
+			<ul>
+				<li ng-repeat="link in links">
+					<dt><a href="{{link.link}}" title="{{link.title}}">{{link.title}}</a></dt>
+					<dd>{{link.description}}</dd>
+				</li>
+			</ul>
+		</div>
+	</footer>
 
 </main>
