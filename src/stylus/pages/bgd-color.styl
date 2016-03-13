@@ -1,0 +1,140 @@
+.view-bgd-colors
+	padding 0 1.25rem
+	margin 0 auto
+	max-width 64rem
+	min-width 64rem
+
+	.intro
+	.outro
+		margin spacing-x-large 0
+		text-align center
+			
+	h2
+	h3
+	h4
+		text-align center
+		
+	h3
+		margin-bottom 1rem
+		
+
+
+	.app-link
+		display inline-flex
+		align-items center
+		cursor pointer
+		
+		&:hover
+			.square
+				.app
+					opacity 0
+					transform translate(-50%, -50%) rotate(-90deg)
+					
+				.chev
+					opacity 1
+					transform translate(-50%, -50%) rotate(0)
+					
+			.app-title
+				color color-blue-science
+				
+	.square
+		position relative
+		width 2.5rem
+		height 2.5rem
+		margin 0 1rem 0 0
+		border-radius .25rem
+		background-color color-blue-sky-300
+		
+		.app
+		.chev
+			position absolute
+			top 50%
+			left 50%
+			width 2rem
+			height 2rem
+			fill white
+			transition timing-2 transform follow-through, timing-2 opacity
+		
+		.app
+			opacity 1
+			transform translate(-50%, -50%) rotate(0)
+		
+		.chev
+			opacity 0
+			transform translate(-50%, -50%) rotate(90deg)
+
+	.app-title
+		font-size 1.125rem
+		transition timing-2 color
+
+		
+	.sentence
+		margin 0 0 2rem
+		text-align center
+
+	.colors
+		display flex
+		flex-wrap wrap
+		justify-content center
+		width 55rem
+		margin 0 auto 4rem
+		padding-left 0
+		list-style none
+
+		li
+			width 2rem
+			height 2rem
+			margin 0 .25rem .25rem 0
+			border-radius 4px
+			border 4px solid hsla(0, 0%, 100%, .1)
+			transition timing-2 border-color
+			cursor pointer
+			
+			&:hover
+				border-color alpha(color-blue-sky-300, 50%)
+
+			&.active
+				border-color color-blue-sky-300
+				
+	.grid-controls
+		display flex
+		flex-direction column
+		justify-content center
+		width 13rem
+		margin 0 auto 2rem
+		
+		.fieldset
+			display flex
+			align-items center
+			margin-bottom .25rem
+
+		.radio
+			margin-right .75rem
+
+	#bgd
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		margin 0
+		padding 1.75rem
+		border-radius 4px
+		list-style none
+		transition timing-2 background-color
+		
+		&.small .tile
+			width 1rem
+			height 1rem
+			
+		&.large .tile
+			width 2rem
+			height 2rem
+		
+		.tile
+			width 1.5rem
+			height 1.5rem
+			margin .25rem
+			border-radius 4px
+			background-color hsl(0, 45%, 85%)
+			transition timing-2 background-color, timing-2 width, timing-2 width
+			
+
