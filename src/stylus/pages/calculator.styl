@@ -67,17 +67,143 @@
 				@media mq-medium
 					text-align left
 			
-			p
+			p.description
 				margin 0
 				
 				@media mq-medium
 					column-count 2
 					column-gap 2rem
+					
+	.calculations
+		display flex
+		flex-direction column
+		
+		@media mq-medium
+			flex-direction row
+		
+		.input
+			width 100%
+			
+			@media mq-medium
+				width 40%
+			
+			@media mq-large
+				width 50%
+
+		.results
+			width 100%
+			
+			@media mq-medium
+				width 60%
+			
+			@media mq-large
+				width 50%
+			
+		.input
+			margin-bottom 2rem
+			
+			@media mq-small
+				padding-right 1rem
+
+			@media mq-medium
+				margin-bottom 0
+			
+			.intro-text
+			.systems
+			.height
+			.inseam
+			.interests
+				margin 0 0 1.5rem
+				
+			.systems
+				list-style none
+				margin 0 0 1.5rem
+				padding-left 0
+				
+				li
+					display flex
+					align-items center
+					margin-bottom .25rem
+					
+					input
+						margin-right .5rem
+						
+					label
+						display inline-block
+						margin-bottom 0
+						
+			.helper-text
+				margin-top 0
+				margin-bottom .5rem
+				font-size .75rem
+					
+
+				
+			
+		.results
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+			
+			@media mq-small
+				padding-left 1rem
+
+			h3
+				width 100%
+			
+			.formula
+				width 50%
+				margin-bottom 1rem
+				
+				@media mq-medium
+					margin-bottom 2rem
+				
+				&:last-child
+					margin-bottom 0
+			
+				.formula-header
+					display flex
+					align-items center
+				
+					.title
+						margin-right .5rem
+						font-weight 700
+					
+				.length
+					font-size 2rem
+					line-height 1.25
+					font-weight 100
+					
+					@media mq-medium
+						font-size 3rem
+					
+					@media mq-large
+						font-size 4rem
+						
+					span
+						display inline-block
+						margin-left .25rem
+						font-family "Helvetica Neue", Helvetica, Arial, sans-serif
+						font-size 1rem
+						color hsl(220, 50%, 80%)
+						letter-spacing 2px
+						
+						@media mq-small
+							letter-spacing 1px
+					
+						@media mq-medium
+							font-size 1.5rem
+							letter-spacing 0
+						
+						@media mq-large
+							font-size 2rem
+						
+			
 			
 	.footer
 		
 		.page
-			padding 0 2rem 0
+			padding 0 2rem 2rem
 
 			ul
 				list-style none
