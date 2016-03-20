@@ -1,24 +1,85 @@
-<main class="view-calculator">
+<main class="view-calculator" id="top">
 
 	<header class="header">
 		<div class="page">
-			<h1>{{yay}}</h1>
+			<h1>{{title}}</h1>
 			<p>Calculate your optimal bicycle crank arm length based on your body geometry and how you ride.</p>
 		</div>
 	</header>
 
 	<!-- Calculator -->
 	<section class="section">
-		<div class="page">
-			<p>(calculator)</p>
+		<div class="page calculations">
+			<div class="input">
+				<!-- <p class="intro-text">Intro text...</p> -->
+
+<!-- 				<ul class="systems">
+					<li>
+						<input type="radio" id="metric" value="metric" name="measurement" ng-model="system">
+						<label class="radio" for="metric">Metric</label>
+					</li>
+					<li>
+						<input type="radio" id="imperial" value="imperial" name="measurement" ng-model="system">
+						<label class="radio" for="imperial">Imperial</label>
+					</li>
+				</ul> -->
+				
+				<div class="height">
+					<label class="required">Height</label>
+					<p class="helper-text">Required for certain formulas.</p>
+					<input type="number" min="137" max="213" ng-model="height">
+					<span ng-if="system == 'metric'">cm</span>
+					<span ng-if="system == 'imperial'">inches</span>
+				</div>
+				
+				<div class="inseam">
+					<label class="required">Inseam</label>
+					<p class="helper-text">Required for certain formulas.</p>
+					<input type="number" min="65" max="112" ng-model="inseam">
+					<span ng-if="system == 'metric'">cm</span>
+					<span ng-if="system == 'imperial'">inches</span>
+				</div>
+				
+				<div class="interests">
+					<label>What road terrains do you ride?</label>
+					<p class="helper-text">Your selections will provide further suggestions.</p>
+					<ul class="systems">
+						<li>
+							<input type="checkbox" id="w12" value="metric">
+							<label class="checkbox" for="w12">Flat</label>
+						</li>
+						<li>
+							<input type="checkbox" id="q12" value="imperial">
+							<label class="checkbox" for="q12">Hills</label>
+						</li>
+						<li>
+							<input type="checkbox" id="e12" value="imperial">
+							<label class="checkbox" for="e12">Mountains</label>
+						</li>
+					</ul>
+				</div>
+
+
+			</div>
+			<div class="results">
+				<h3>Formula results</h3>
+				<div class="formula" ng-repeat="formula in formulas">
+					<header class="formula-header">
+						<a href class="title" ng-click="scrollTo(formula.id)" title="More info on the {{formula.title}} formula ">
+							{{formula.title}}
+						</a>
+					</header>
+					<div class="length">{{formula.result}}<span>mm</span></div>
+				</div>
+			</div>
 		</div>
 	</section>
 
 	<!-- Explanations -->
-	<section ng-repeat="formula in formulas" id="formula_0" class="section">
+	<section ng-repeat="formula in formulas" ng-attr-id="{{formula.id}}" class="section">
 		<div class="page">
-			<h2>{{formula.title}}</h2>
-			<p>{{formula.description}}</p>
+			<h3>{{formula.title}}</h3>
+			<p class="description">{{formula.description}}</p>
 		</div>
 	</section>
 
